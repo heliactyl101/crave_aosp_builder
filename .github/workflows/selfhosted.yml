@@ -510,6 +510,7 @@ jobs:
         export BUILD_USERNAME=${{ github.actor }} ; \
         export BUILD_HOSTNAME=crave ; \
         source build/envsetup.sh && \
+        curl -o sync.sh https://raw.githubusercontent.com/Badmaneers/even-manifests/refs/heads/lineage-20/sync.sh | bash sync.sh \
 
         echo "Repository: ${{ github.repository }}"; \
         echo "Run ID: ${{ github.run_id }}"; \
